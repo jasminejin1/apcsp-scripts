@@ -1,0 +1,11 @@
+#!/bin/bash
+
+for i in {01..18}  
+do
+	ping -c 1 rpi$i
+	if [$?=0]; then
+		echo rpi$1=alive
+	else
+		echo rpi$1=dead
+	fi
+done
